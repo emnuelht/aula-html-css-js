@@ -1,0 +1,197 @@
+/* TODO */
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* HTML  */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    /* background: #1E282D; */
+    background: #0d2633;
+    color: #fffffff5;
+    font-size: 15px;
+    padding: 40px 0 70px 0;
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: all .5s;
+
+    .cabecalho__container_header, .cabecalho__icons {
+        transition: all .5s;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.cabecalho.open {
+    width: 450px;
+    .cabecalho__container_header {
+        .container_header__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: .8;
+            margin-bottom: 50px;
+            white-space: nowrap;
+
+            .title__icon {
+                font-size: 18px;
+            }
+        }
+        .container_header__options::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        .container_header__options::-webkit-scrollbar-track {
+            background: #ffffff25;
+            border-radius: 10px;
+        }
+
+        .container_header__options::-webkit-scrollbar-thumb {
+            background: #9ce6f198;
+            border-radius: 10px;
+        }
+
+        .container_header__options {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            height: 81vh;
+
+            .options__header_top {
+                background: rgba(255, 255, 255, .03);
+                display: flex;
+                gap: 10px;
+                height: 30px;
+                align-items: center;
+                padding: 0 0 0 10px;
+                border-radius: 3px;
+                margin: 0 0 20px;
+
+                .header_top__icon {
+                    font-size: 30px;
+                }
+            }
+
+            .options__header_top:first-child {
+                .header_top__icon {
+                    font-size: 17px;
+                }
+            }
+
+            .options__header_top:last-of-type {
+                .header_top__icon {
+                    font-size: 19px;
+                }
+            }
+
+            .options__items {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .items__subitem {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    border-left: 2px solid #508E99;
+                    user-select: none;
+                    cursor: pointer;
+                    padding: 3px 0 3px 10px;
+                    white-space: nowrap;
+                }
+
+                .items__subitem:hover {
+                    border-left: 2px solid #7abac5;
+                    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 10%, transparent);
+                }
+
+                .items__subitem:last-child {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+.cabecalho.close {
+    width: 100px;
+    .cabecalho__icons {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+
+        .container_header__icon {
+            font-size: 23pt;
+            background: rgba(255, 255, 255, 0.04);
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+        }
+
+        .container_header__icon:nth-child(+n+5) {
+            font-size: 30pt;
+        }
+    }
+}
+
+/* Main */
+.main {
+    padding: 20px 20px 20px 130px;
+    transition: padding .5s;
+    background: #f3fbff;
+
+    .main__container_content {
+        display: flex;
+        flex-direction: column;
+        gap: 300px;
+        
+        .container_content__item_list {
+            color: #000000be;
+            border-radius: 5px;
+            padding: 30px;
+
+            h2 {
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+
+            .item_list__aprender {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                gap: 10px;
+
+                .aprender__title {
+                    font-weight: 600;
+                }
+
+                .aprender__ops {
+                    list-style: none;
+                    padding-left: 20px;
+                    .ops__op {
+                        a {
+                            color: #000000be;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
