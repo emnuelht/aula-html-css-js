@@ -161,15 +161,20 @@ html {
         display: flex;
         flex-direction: column;
         gap: 300px;
-        
+
         .container_content__item_list {
             color: #000000be;
             border-radius: 5px;
             padding: 30px;
 
+            h1 {
+                font-size: 22px;
+            }
+
             h2 {
                 margin-top: 50px;
                 margin-bottom: 20px;
+                font-size: 22px;
             }
 
             .item_list__aprender {
@@ -179,12 +184,13 @@ html {
                 gap: 10px;
 
                 .aprender__title {
-                    font-weight: 600;
+                    font-weight: 700;
                 }
 
                 .aprender__ops {
                     list-style: none;
                     padding-left: 20px;
+
                     .ops__op {
                         a {
                             color: #000000be;
